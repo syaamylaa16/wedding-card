@@ -13,7 +13,7 @@
         
         h1 {
             font-family: 'Lora', serif;
-            font-size: 2rem;
+            font-size: 48px;
             font-weight: bold;
         }
         
@@ -24,9 +24,6 @@
             padding: 0px;
             margin: 0px;
             font-style: italic;
-	    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
         }
 
         nav ul {
@@ -73,31 +70,31 @@
 
         .home-box {
             background-color: #ffffff;
-            width: 100%;
-            max-width: 480px; /* Supaya tak terlalu besar di skrin besar */
-            height: auto; /* Biarkan tinggi ikut kandungan */
+            width: 700px;
+            height: 700px;
             background-image: url('home.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
             text-align: center;
+            max-width: 800px;
             margin: 0 auto;
-            margin-top: -60px; /* Reduce the gap by pulling the box upwards */
+			margin-top: -60px; /* Reduce the gap by pulling the box upwards */
         }
 
         .ayat {
     position: relative;
     background-color: #ffffff;
-    width: 100%;
-    max-width: 480px; /* Supaya tak terlalu besar di skrin besar */
-    height: auto; /* Biarkan tinggi ikut kandungan */
+    width: 700px;
+    height: 900px;
     background-image: url('ayat.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
     text-align: center;
+    max-width: 800px;
     margin: 0 auto;
     overflow: hidden; /* Elak overflow */
 }
@@ -108,7 +105,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover; /* Pastikan video memenuhi kotak */
     pointer-events: none; /* Elak pengguna tekan video */	
 
@@ -131,9 +128,9 @@
     padding: 10px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
-   width: 100%;
-   max-width: 480px; /* Supaya tak terlalu besar di skrin besar */
-    height: auto; /* Biarkan tinggi ikut kandungan */
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 30px;
@@ -221,9 +218,9 @@
     padding: 10px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 100%;
-    max-width: 480px; /* Supaya tak terlalu besar di skrin besar */
-    height: auto; /* Biarkan tinggi ikut kandungan */
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 30px;
@@ -244,9 +241,9 @@
     padding: 10px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 100%;
-    max-width: 480px; /* Supaya tak terlalu besar di skrin besar */
-            height: auto; /* Biarkan tinggi ikut kandungan */
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 30px;
@@ -276,9 +273,9 @@
 
         iframe {
             border: none;
-             width: 100%;
-    max-width: 480px;
-    height: auto;
+            width: 100%;
+            max-width: 640px;
+            height: 700px;
             margin: 20px 0;
             border-radius: 10px;
 			box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
@@ -305,9 +302,9 @@
     padding: 10px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 100%;
-            max-width: 480px; /* Supaya tak terlalu besar di skrin besar */
-            height: auto; /* Biarkan tinggi ikut kandungan */
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 30px;
@@ -362,14 +359,11 @@
             font-weight: bold;
         }
         /* Media Queries - Untuk skrin kecil */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-    p, a {
-        font-size: 16px;
-    }
-}
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
 		
     </style>
 </head>

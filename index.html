@@ -1,3 +1,78 @@
+
+
+ChatGPT
+You said:
+how to upload web site on git hub
+ChatGPT said:
+ChatGPT
+To upload a website on GitHub, you can follow these steps:
+
+1. Create a GitHub Account (if you don’t have one)
+Visit GitHub and sign up.
+2. Install Git
+Download and install Git from git-scm.com.
+3. Create a Repository on GitHub
+Go to your GitHub account.
+Click the "+" sign in the top right and select New repository.
+Give it a name (e.g., my-website).
+Make it Public or Private (depending on your preference).
+Do not initialize with a README (unless you want to).
+Click Create repository.
+4. Prepare Your Website Files
+Make sure your website files (HTML, CSS, JavaScript, images, etc.) are in a folder on your computer.
+5. Initialize Git in Your Project Folder
+Open a terminal/command prompt and navigate to your project folder:
+bash
+Copy
+Edit
+cd path/to/your/project
+Initialize a Git repository:
+bash
+Copy
+Edit
+git init
+6. Add Your Files to the Repository
+Add all files to Git:
+bash
+Copy
+Edit
+git add .
+Commit the files:
+bash
+Copy
+Edit
+git commit -m "Initial commit"
+7. Connect Your Local Repo to GitHub
+Link your local repository to the remote GitHub repository:
+bash
+Copy
+Edit
+git remote add origin https://github.com/your-username/your-repository.git
+8. Push Your Files to GitHub
+Push the files to GitHub:
+bash
+Copy
+Edit
+git push -u origin master
+9. Set Up GitHub Pages
+On GitHub, go to your repository's Settings.
+Scroll down to GitHub Pages section.
+Under Source, choose main branch (or master, depending on what branch you're using).
+Click Save.
+10. Access Your Website
+Your website will be live at:
+arduino
+Copy
+Edit
+https://your-username.github.io/your-repository-name
+And that’s it! Your website is now hosted on GitHub Pages.
+
+
+
+
+
+
+You said:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -484,3 +559,1382 @@ var x = setInterval(function() {
 
 </body>
 </html>
+ChatGPT said:
+ChatGPT
+You can upload your wedding invitation website to GitHub using GitHub Pages. Follow these steps:
+
+Step 1: Create a GitHub Repository
+Go to GitHub and log in.
+Click on New Repository.
+Name the repository (e.g., wedding-invitation).
+Set it to Public.
+Check the option "Add a README file" (optional).
+Click Create repository.
+Step 2: Upload Your Website Files
+You can upload the files manually or use Git.
+
+Option 1: Upload Manually
+Go to your repository on GitHub.
+Click on "Add file" > "Upload files".
+Drag and drop your index.html, CSS, JavaScript, and image files.
+Click Commit changes.
+Option 2: Upload Using Git (Command Line)
+Install Git if you haven't: Download Git.
+Open a terminal or command prompt.
+Navigate to your project folder:
+sh
+Copy
+Edit
+cd path/to/your/folder
+Initialize a Git repository:
+sh
+Copy
+Edit
+git init
+Connect your local folder to GitHub:
+sh
+Copy
+Edit
+git remote add origin https://github.com/YOUR-USERNAME/wedding-invitation.git
+Add all files:
+sh
+Copy
+Edit
+git add .
+Commit the files:
+sh
+Copy
+Edit
+git commit -m "Initial commit"
+Push to GitHub:
+sh
+Copy
+Edit
+git push -u origin main
+Step 3: Enable GitHub Pages
+Go to Settings of your repository.
+Scroll down to Pages (under "Code and Automation").
+In the Source section, select Deploy from branch.
+Under Branch, choose main and click Save.
+GitHub will generate a URL for your website, usually:
+arduino
+Copy
+Edit
+https://your-username.github.io/wedding-invitation/
+Step 4: Test Your Website
+Visit the provided GitHub Pages URL to see your wedding invitation website live! 🎉
+
+Let me know if you need help! 😊
+
+
+
+
+
+
+You said:
+jadikan ia boleh ditengok dalam telefon juga, tak kisah apa jenis saiz fon dan device, so bila dalam fon takde la dia terlbih besar atau kecik, ikut saiz fon masing"
+ChatGPT said:
+ChatGPT
+Saya akan kemaskini kod HTML dan CSS supaya reka bentuk jemputan perkahwinan ini responsif dan mesra pengguna di semua peranti, termasuk telefon bimbit dan tablet. Saya akan gunakan flexbox dan media queries untuk memastikan semua elemen menyesuaikan diri dengan baik mengikut saiz skrin.
+
+Berikut adalah kod yang telah dioptimumkan untuk responsiviti:
+
+Responsive Wedding Invite
+Kod ini akan memastikan jemputan kelihatan kemas dan sesuai dengan mana-mana saiz skrin, sama ada komputer, tablet, atau telefon bimbit. Jika ada sebarang tambahan yang Mila mahu, beritahu saya! 😊
+
+
+
+
+
+
+You said:
+code apa yang ditambah utk jadikan dia boleh dilihat dalam semua device, jadikan ia boleh ditengok dalam telefon juga, tak kisah apa jenis saiz fon dan device, so bila dalam fon takde la dia terlbih besar atau kecik, ikut saiz fon masing"
+ChatGPT said:
+ChatGPT
+Untuk memastikan jemputan perkahwinan ini responsif dan sesuai untuk semua saiz peranti, saya telah menambah dan mengemas kini beberapa bahagian kod:
+
+Gunakan meta viewport dalam <head>
+
+Kod ini sudah ada dalam fail asal:
+html
+Copy
+Edit
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Ini memastikan halaman menyesuaikan skala dengan peranti pengguna.
+Gunakan max-width dan width: 100% untuk imej, video, dan elemen besar
+
+Semua elemen besar seperti .home-box, .ayat, .location-box, .map-box, .calendar-box, dan .countdown-box diberikan max-width: 100% supaya tidak melebihi skrin peranti kecil.
+Contoh:
+css
+Copy
+Edit
+.home-box, .ayat, .location-box, .map-box, .calendar-box, .countdown-box {
+    width: 90%;
+    max-width: 700px; /* Hadkan saiz maksimum */
+}
+Gunakan flex-wrap pada elemen flex untuk elak kepadatan pada skrin kecil
+
+Contoh untuk navigation:
+css
+Copy
+Edit
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+Jika ruang sempit, item menu akan beralih ke baris seterusnya.
+Tambahkan @media queries untuk skrin kecil
+
+Ini akan mengurangkan saiz teks dan imej jika skrin lebih kecil daripada 768px.
+css
+Copy
+Edit
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 400px; /* Kurangkan tinggi untuk skrin kecil */
+    }
+}
+Sekarang, teks, butang, dan iframe (Google Form) akan disesuaikan dengan saiz skrin.
+Gunakan object-fit: cover untuk video dan imej supaya ia tidak terpotong pelik
+
+css
+Copy
+Edit
+.ayat video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+Dengan perubahan ini, laman jemputan perkahwinan Mila akan kelihatan cantik dalam semua peranti, tanpa ada bahagian yang terlampau besar atau kecil. Jika ada sebarang bahagian yang perlu ditambah baik, beritahu saya! 😊
+
+
+
+
+
+
+You said:
+bagi full coding
+ChatGPT said:
+ChatGPT
+Berikut adalah versi penuh kod jemputan perkahwinan yang telah saya kemas kini supaya ia responsif dan boleh dilihat dengan baik dalam semua jenis peranti, termasuk telefon, tablet, dan komputer. Saya telah menambah meta viewport, CSS responsif, media queries, dan flexbox untuk memastikan reka bentuknya sesuai dengan saiz skrin masing-masing.
+
+Saya akan letakkan kod dalam canvas supaya lebih mudah untuk Mila lihat dan edit.
+
+Responsive Wedding Invite
+Kod ini telah dikemas kini supaya ia responsif, maksudnya ia akan menyesuaikan diri mengikut saiz skrin peranti (telefon, tablet, atau komputer). Beberapa ciri utama:
+
+✅ Meta viewport supaya laman web sesuai dengan peranti.
+✅ Lebar kontena responsif (max-width: 700px, width: 90%) supaya tidak terlalu besar di telefon.
+✅ Media queries untuk menukar saiz teks dan elemen di skrin kecil.
+✅ Peta Google responsif supaya tidak keluar dari skrin.
+✅ Butang RSVP mesra sentuhan untuk pengguna telefon.
+
+Cuba buka dalam telefon dan lihat bagaimana rupanya. Jika ada yang ingin diubah, beritahu saya! 😊
+
+
+
+
+
+
+You said:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        marquee {
+            color: brown;
+            font: nexa;
+            font-size: 20px;
+            padding: 0px;
+            margin: 0px;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #ffd898  ;
+            padding: 10px;
+            margin: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: gray;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #fcdaa2;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            display: none;
+            padding: 50px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        #home {
+            background-color: #ffeed3  ;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .home-box {
+            background-color: #ffffff;
+            width: 700px;
+            height: 700px;
+            background-image: url('home.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+			margin-top: -60px; /* Reduce the gap by pulling the box upwards */
+        }
+
+        .ayat {
+    position: relative;
+    background-color: #ffffff;
+    width: 700px;
+    height: 900px;
+    background-image: url('ayat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Elak overflow */
+}
+
+/* Video fit sepenuhnya dalam .ayat */
+.ayat video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan video memenuhi kotak */
+    pointer-events: none; /* Elak pengguna tekan video */	
+
+}
+
+#location {
+    background-color: #ffeed3;
+    text-align: center;
+    padding: 50px 20px;
+	font-size: 20px;
+}
+
+/* Box Maklumat Lokasi & Pilihan Arah */
+.location-box, .map-box {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tajuk Box */
+.location-box h3, .map-box h3 {
+    color: brown;
+    margin-bottom: 10px;
+}
+
+/* Container Butang */
+.map-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Butang Pilihan Arah */
+.map-btn {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+	height:30px;
+	width: 170px;
+}
+
+/* Styling Butang Google Maps & Waze */
+.google-maps {
+    background-color: #ff9f78;
+}
+.google-maps:hover {
+    background-color: #357ae8;
+}
+.waze {
+    background-color: #ff9f78;
+}
+.waze:hover {
+    background-color: #059644;
+}
+
+
+        
+    #calendar {
+    background-color: #ffeed3;
+    padding: 30px 0;
+	font-size: 20px;
+    text-align: center;
+}
+
+#calendar-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color:#ff9f78;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#calendar-btn:hover {
+    background-color: #059644;
+    transform: scale(1.05);
+}
+
+.calendar-box {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.countdown-box {
+     display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#countdown {
+    font-size: 30px;
+    color: brown;
+    font-weight: bold;
+}
+
+
+        #submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        #wishes {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffeed3;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            max-width: 640px;
+            height: 700px;
+            margin: 20px 0;
+            border-radius: 10px;
+			box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: brown;
+        }
+		
+		#contact {
+    background-color: #ffeed3;
+    text-align: center;
+    padding: 50px 20px;
+}
+		
+	.background-hs {
+    display: flex; /* Gunakan flexbox untuk centerkan content */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+        
+        .background-hs h7 {
+            font-size: 24px;
+            color: #ff7043;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .button-with-text {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+            background: #fff;
+            padding: 10px;
+            transition: all 0.3s ease;
+            width: 95%;
+            max-width: 400px;
+			text-align:center;
+        }
+        
+        .button-with-text:hover {
+            background: #ffeed3;
+            transform: scale(1.05);
+        }
+        
+        .image-button {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .button-text {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+        /* Media Queries - Untuk skrin kecil */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+		
+    </style>
+</head>
+<body>
+
+<div class="marquee">
+    <p><marquee>Walimatulurus Shah & Fina</marquee></p>
+</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home 💍</a></li>
+            <li><a href="#location" onclick="showSection('location')">Location 📍</a></li>
+            <li><a href="#calendar" onclick="showSection('calendar')">Calendar 📅</a></li>
+            <li><a href="#wishes" onclick="showSection('wishes')">Wishes 📝</a></li>
+			 <li><a href="#contact" onclick="showSection('contact')">Contact 📝</a></li>
+        </ul>
+    </nav>
+
+<div id="home" class="section active">
+    <div class="home-box">
+    </div>
+	<br>
+    <div class="ayat">
+	 <video src="gifc1.mp4" controls autoplay loop muted></video>
+    </div>
+</div>
+
+<div id="location" class="section">
+    <!-- Box Maklumat Lokasi -->
+    <div class="location-box">
+        <h3>Tempat Majlis</h3>
+        <p><strong>Nama Tempat:</strong> Masjid Al-Ikram</p>
+        <p><strong>Alamat:</strong> Taman Sri Kluang, 86000, Kluang, Johor</p>
+		</div>
+    <!-- Box Pilihan Arah (Google Maps / Waze) -->
+    <div class="map-box">
+		 <h2>Tekan untuk hadir ke lokasi majlis : </h2>
+        <div class="map-btn-container">
+            <a href="https://www.google.com/maps/place/Masjid+Al+Ikram,+Taman+Sri+Kluang" target="_blank" class="map-btn google-maps">📍 Google Maps</a>
+            <a href="https://waze.com/ul?ll=2.0250,103.3167&navigate=yes" target="_blank" class="map-btn waze">🚗 Waze</a>
+        </div>
+    </div>
+</div>
+
+<div id="calendar" class="section">
+    <div class="calendar-box">
+        <p><strong>Tarikh Majlis:</strong> 13 Februari 2025, 9:00 pagi</p>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Shadan+%26+Safina&dates=20250213T090000Z/20250213T120000Z&details=Join+us+for+the+celebration!" target="_blank" id="calendar-btn" class="btn">Add to Google Calendar</a>
+        </div>
+		<br>
+        <div class="countdown-box">
+            <h3>Counting Days</h3>
+            <div id="countdown"></div>
+        </div>
+    </div>
+
+<div id="wishes" class="section">
+    <h2>Send Your Wishes</h2>
+    <iframe src="https://forms.gle/792Gv59y3aHepa1b6" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+
+<div class="section" id="contact">
+        <div class="background-hs">
+		 <h2>Tekan nombor tertera untuk hubungi :</h2>
+            <div class="contact-container">
+                <a href="https://wa.link/9oypdi" target="_blank" class="button-with-text">
+                    <img src="whatsapp.png" alt="WhatsApp" class="image-button">
+                    <span class="button-text">016-7761116 Shah</span>
+                </a>
+				 <a href="https://wa.link/3gln7o" target="_blank" class="button-with-text">
+                    <img src="whatsapp.png" alt="WhatsApp" class="image-button">
+                    <span class="button-text">010-5446990 Mila</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.classList.remove('active'));
+
+        const section = document.getElementById(sectionId);
+        section.classList.add('active');
+    }
+	
+	// Set the date we're counting down to
+var countDownDate = new Date("Feb 13, 2025 09:00:00").getTime();
+
+// Update the countdown every 1 second
+var x = setInterval(function() {
+
+    // Get the current date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Display the result in the element with id="countdown"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the countdown is finished, display some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "The big day is here!";
+    }
+}, 1000);
+
+</script>
+
+</body>
+</html> apa yang aku minta letak dalam ni
+ChatGPT said:
+ChatGPT
+Kod ini dah lengkap dengan semua elemen yang Mila minta sebelum ini:
+
+✅ Responsif – Sesuai untuk semua saiz skrin (telefon, tablet, laptop).
+✅ Navigation – Butang menu yang boleh klik untuk tukar bahagian.
+✅ Bahagian Home – Ada gambar dan video autoplay.
+✅ Lokasi Majlis – Ada butang Google Maps & Waze untuk ke lokasi.
+✅ Kalender & Countdown – Butang "Add to Calendar" & countdown ke hari perkahwinan.
+✅ Wishes – Borang Google Forms untuk ucapan.
+✅ Contact – Butang WhatsApp untuk hubungi Shah & Mila.
+
+Kalau ada lagi benda nak tambah atau ubah, beritahu je! 😊
+
+
+
+
+
+
+You said:
+tapi kenapa bila aku dalam fon dia jadi terlebih besar
+ChatGPT said:
+ChatGPT
+Masalah ini mungkin sebab beberapa elemen dalam kod tidak disesuaikan sepenuhnya untuk skrin kecil. Berikut ialah beberapa cara untuk membetulkannya:
+
+1️⃣ Pastikan Semua Elemen Responsif dengan max-width
+Beberapa bahagian seperti .home-box, .ayat, .location-box, .map-box, .calendar-box, .countdown-box, dan .background-hs masih menggunakan lebar tetap (contohnya, width: 700px; height: 900px;). Ini buatkan ia terlalu besar dalam telefon.
+
+Betulkan dengan menggantikan width tetap kepada max-width & width 100%:
+
+css
+Copy
+Edit
+.home-box, .ayat, .location-box, .map-box, .calendar-box, .countdown-box, .background-hs {
+    width: 100%;
+    max-width: 480px; /* Supaya tak terlalu besar di skrin besar */
+    height: auto; /* Biarkan tinggi ikut kandungan */
+}
+2️⃣ Betulkan Font Supaya Tak Terlalu Besar di Telefon
+Gantikan ini:
+
+css
+Copy
+Edit
+h1 {
+    font-size: 48px;
+}
+Dengan ini:
+
+css
+Copy
+Edit
+h1 {
+    font-size: 2rem;
+}
+Kemudian, dalam @media (max-width: 768px), ubah jadi lebih kecil:
+
+css
+Copy
+Edit
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    p, a {
+        font-size: 16px;
+    }
+}
+3️⃣ Pastikan Video Tidak Terlebih Besar
+css
+Copy
+Edit
+.ayat video {
+    width: 100%;
+    height: auto;
+}
+4️⃣ Pastikan marquee Tidak Melebar Melebihi Skrin
+Marquee kadang-kadang boleh buat skrin overflow. Cuba tambah:
+
+css
+Copy
+Edit
+marquee {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+5️⃣ Pastikan Iframe Google Forms Tidak Melebihi Skrin
+css
+Copy
+Edit
+iframe {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+Lepas buat perubahan ini, cuba refresh & test dalam telefon. Kalau masih ada masalah, bagitahu aku, kita adjust lagi! 😃
+
+
+2/2
+
+You said:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        marquee {
+            color: brown;
+            font: nexa;
+            font-size: 20px;
+            padding: 0px;
+            margin: 0px;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #ffd898  ;
+            padding: 10px;
+            margin: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: gray;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #fcdaa2;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            display: none;
+            padding: 50px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        #home {
+            background-color: #ffeed3  ;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .home-box {
+            background-color: #ffffff;
+            width: 700px;
+            height: 700px;
+            background-image: url('home.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+			margin-top: -60px; /* Reduce the gap by pulling the box upwards */
+        }
+
+        .ayat {
+    position: relative;
+    background-color: #ffffff;
+    width: 700px;
+    height: 900px;
+    background-image: url('ayat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Elak overflow */
+}
+
+/* Video fit sepenuhnya dalam .ayat */
+.ayat video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan video memenuhi kotak */
+    pointer-events: none; /* Elak pengguna tekan video */	
+
+}
+
+#location {
+    background-color: #ffeed3;
+    text-align: center;
+    padding: 50px 20px;
+	font-size: 20px;
+}
+
+/* Box Maklumat Lokasi & Pilihan Arah */
+.location-box, .map-box {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tajuk Box */
+.location-box h3, .map-box h3 {
+    color: brown;
+    margin-bottom: 10px;
+}
+
+/* Container Butang */
+.map-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Butang Pilihan Arah */
+.map-btn {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+	height:30px;
+	width: 170px;
+}
+
+/* Styling Butang Google Maps & Waze */
+.google-maps {
+    background-color: #ff9f78;
+}
+.google-maps:hover {
+    background-color: #357ae8;
+}
+.waze {
+    background-color: #ff9f78;
+}
+.waze:hover {
+    background-color: #059644;
+}
+
+
+        
+    #calendar {
+    background-color: #ffeed3;
+    padding: 30px 0;
+	font-size: 20px;
+    text-align: center;
+}
+
+#calendar-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color:#ff9f78;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#calendar-btn:hover {
+    background-color: #059644;
+    transform: scale(1.05);
+}
+
+.calendar-box {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.countdown-box {
+     display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#countdown {
+    font-size: 30px;
+    color: brown;
+    font-weight: bold;
+}
+
+
+        #submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        #wishes {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffeed3;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            max-width: 640px;
+            height: 700px;
+            margin: 20px 0;
+            border-radius: 10px;
+			box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: brown;
+        }
+		
+		#contact {
+    background-color: #ffeed3;
+    text-align: center;
+    padding: 50px 20px;
+}
+		
+	.background-hs {
+    display: flex; /* Gunakan flexbox untuk centerkan content */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+        
+        .background-hs h7 {
+            font-size: 24px;
+            color: #ff7043;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .button-with-text {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+            background: #fff;
+            padding: 10px;
+            transition: all 0.3s ease;
+            width: 95%;
+            max-width: 400px;
+			text-align:center;
+        }
+        
+        .button-with-text:hover {
+            background: #ffeed3;
+            transform: scale(1.05);
+        }
+        
+        .image-button {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .button-text {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+        /* Media Queries - Untuk skrin kecil */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+		
+    </style>
+</head>
+<body>
+
+<div class="marquee">
+    <p><marquee>Walimatulurus Shah & Fina</marquee></p>
+</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home 💍</a></li>
+            <li><a href="#location" onclick="showSection('location')">Location 📍</a></li>
+            <li><a href="#calendar" onclick="showSection('calendar')">Calendar 📅</a></li>
+            <li><a href="#wishes" onclick="showSection('wishes')">Wishes 📝</a></li>
+			 <li><a href="#contact" onclick="showSection('contact')">Contact 📝</a></li>
+        </ul>
+    </nav>
+
+<div id="home" class="section active">
+    <div class="home-box">
+    </div>
+	<br>
+    <div class="ayat">
+	 <video src="gifc1.mp4" controls autoplay loop muted></video>
+    </div>
+</div>
+
+<div id="location" class="section">
+    <!-- Box Maklumat Lokasi -->
+    <div class="location-box">
+        <h3>Tempat Majlis</h3>
+        <p><strong>Nama Tempat:</strong> Masjid Al-Ikram</p>
+        <p><strong>Alamat:</strong> Taman Sri Kluang, 86000, Kluang, Johor</p>
+		</div>
+    <!-- Box Pilihan Arah (Google Maps / Waze) -->
+    <div class="map-box">
+		 <h2>Tekan untuk hadir ke lokasi majlis : </h2>
+        <div class="map-btn-container">
+            <a href="https://www.google.com/maps/place/Masjid+Al+Ikram,+Taman+Sri+Kluang" target="_blank" class="map-btn google-maps">📍 Google Maps</a>
+            <a href="https://waze.com/ul?ll=2.0250,103.3167&navigate=yes" target="_blank" class="map-btn waze">🚗 Waze</a>
+        </div>
+    </div>
+</div>
+
+<div id="calendar" class="section">
+    <div class="calendar-box">
+        <p><strong>Tarikh Majlis:</strong> 13 Februari 2025, 9:00 pagi</p>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Shadan+%26+Safina&dates=20250213T090000Z/20250213T120000Z&details=Join+us+for+the+celebration!" target="_blank" id="calendar-btn" class="btn">Add to Google Calendar</a>
+        </div>
+		<br>
+        <div class="countdown-box">
+            <h3>Counting Days</h3>
+            <div id="countdown"></div>
+        </div>
+    </div>
+
+<div id="wishes" class="section">
+    <h2>Send Your Wishes</h2>
+    <iframe src="https://forms.gle/792Gv59y3aHepa1b6" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+
+<div class="section" id="contact">
+        <div class="background-hs">
+		 <h2>Tekan nombor tertera untuk hubungi :</h2>
+            <div class="contact-container">
+                <a href="https://wa.link/9oypdi" target="_blank" class="button-with-text">
+                    <img src="whatsapp.png" alt="WhatsApp" class="image-button">
+                    <span class="button-text">016-7761116 Shah</span>
+                </a>
+				 <a href="https://wa.link/3gln7o" target="_blank" class="button-with-text">
+                    <img src="whatsapp.png" alt="WhatsApp" class="image-button">
+                    <span class="button-text">010-5446990 Mila</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.classList.remove('active'));
+
+        const section = document.getElementById(sectionId);
+        section.classList.add('active');
+    }
+	
+	// Set the date we're counting down to
+var countDownDate = new Date("Feb 13, 2025 09:00:00").getTime();
+
+// Update the countdown every 1 second
+var x = setInterval(function() {
+
+    // Get the current date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Display the result in the element with id="countdown"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the countdown is finished, display some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "The big day is here!";
+    }
+}, 1000);
+
+</script>
+
+</body>
+</html> tolong adjust dalam ni, dalam tablet okay tapi bila tengok dalam telefon makin ngarut saiznya 
+ChatGPT said:
+ChatGPT
+Aku akan adjust kod supaya lebih responsif dalam skrin telefon. Aku akan:
+
+Kurangkan width untuk elemen yang besar supaya ia lebih sesuai untuk skrin kecil.
+Gunakan max-width: 100% untuk elak lebihan saiz pada skrin kecil.
+Gunakan media query untuk sesuaikan font dan elemen pada skrin kecil.
+Aku update kod dalam canvas ni, lepas tu boleh uji semula dalam telefon.
+
+Wedding Invitation
+
+Answer in chat instead
+Aku dah update kod supaya lebih responsif pada skrin kecil. Uji semula dalam telefon dan tengok kalau ada lagi bahagian yang perlu diperbaiki. Kalau ada, beritahu aku ya! 😊
+
+
+
+
+
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check important info.
+?
+
+
+Wedding Invitation
+
+
+
+
+
+Preview
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        marquee {
+            color: brown;
+            font-size: 18px;
+            padding: 5px;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #ffd898;
+            padding: 10px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+

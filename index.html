@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        marquee {
+            color: brown;
+            font: nexa;
+            font-size: 20px;
+            padding: 0px;
+            margin: 0px;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #ffd898  ;
+            padding: 10px;
+            margin: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: gray;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #fcdaa2;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            display: none;
+            padding: 50px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        #home {
+            background-color: #ffeed3  ;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .home-box {
+            background-color: #ffffff;
+            width: 700px;
+            height: 700px;
+            background-image: url('home.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+			margin-top: -60px; /* Reduce the gap by pulling the box upwards */
+        }
+
+        .ayat {
+    position: relative;
+    background-color: #ffffff;
+    width: 700px;
+    height: 900px;
+    background-image: url('ayat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 8px rgba(0, 0, 0.3, 0.3);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Elak overflow */
+}
+
+/* Video fit sepenuhnya dalam .ayat */
+.ayat video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan video memenuhi kotak */
+    pointer-events: none; /* Elak pengguna tekan video */	
+
+}
+
+#location {
+    background-color: #ffeed3;
+    text-align: center;
+    padding: 50px 20px;
+	font-size: 20px;
+}
+
+/* Box Maklumat Lokasi & Pilihan Arah */
+.location-box, .map-box {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tajuk Box */
+.location-box h3, .map-box h3 {
+    color: brown;
+    margin-bottom: 10px;
+}
+
+/* Container Butang */
+.map-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Butang Pilihan Arah */
+.map-btn {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+	height:30px;
+	width: 170px;
+}
+
+/* Styling Butang Google Maps & Waze */
+.google-maps {
+    background-color: #ff9f78;
+}
+.google-maps:hover {
+    background-color: #357ae8;
+}
+.waze {
+    background-color: #ff9f78;
+}
+.waze:hover {
+    background-color: #059644;
+}
+
+
+        
+    #calendar {
+    background-color: #ffeed3;
+    padding: 30px 0;
+	font-size: 20px;
+    text-align: center;
+}
+
+#calendar-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color:#ff9f78;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#calendar-btn:hover {
+    background-color: #059644;
+    transform: scale(1.05);
+}
+
+.calendar-box {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.countdown-box {
+     display: flex; /* Gunakan flexbox */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#countdown {
+    font-size: 30px;
+    color: brown;
+    font-weight: bold;
+}
+
+
+        #submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        #wishes {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffeed3;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            max-width: 640px;
+            height: 700px;
+            margin: 20px 0;
+            border-radius: 10px;
+			box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: brown;
+        }
+		
+		#contact {
+    background-color: #ffeed3;
+    text-align: center;
+    padding: 50px 20px;
+}
+		
+	.background-hs {
+    display: flex; /* Gunakan flexbox untuk centerkan content */
+    flex-direction: column;
+    justify-content: center; /* Center secara menegak */
+    align-items: center; /* Center secara mendatar */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url('bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+        
+        .background-hs h7 {
+            font-size: 24px;
+            color: #ff7043;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .button-with-text {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+            background: #fff;
+            padding: 10px;
+            transition: all 0.3s ease;
+            width: 95%;
+            max-width: 400px;
+			text-align:center;
+        }
+        
+        .button-with-text:hover {
+            background: #ffeed3;
+            transform: scale(1.05);
+        }
+        
+        .image-button {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .button-text {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+        /* Media Queries - Untuk skrin kecil */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+		
+    </style>
+</head>
+<body>
+
+<div class="marquee">
+    <p><marquee>Walimatulurus Shah & Fina</marquee></p>
+</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home 💍</a></li>
+            <li><a href="#location" onclick="showSection('location')">Location 📍</a></li>
+            <li><a href="#calendar" onclick="showSection('calendar')">Calendar 📅</a></li>
+            <li><a href="#wishes" onclick="showSection('wishes')">Wishes 📝</a></li>
+			 <li><a href="#contact" onclick="showSection('contact')">Contact 📝</a></li>
+        </ul>
+    </nav>
+
+<div id="home" class="section active">
+    <div class="home-box">
+    </div>
+	<br>
+    <div class="ayat">
+	 <video src="gifc1.mp4" controls autoplay loop muted></video>
+    </div>
+</div>
+
+<div id="location" class="section">
+    <!-- Box Maklumat Lokasi -->
+    <div class="location-box">
+        <h3>Tempat Majlis</h3>
+        <p><strong>Nama Tempat:</strong> Masjid Al-Ikram</p>
+        <p><strong>Alamat:</strong> Taman Sri Kluang, 86000, Kluang, Johor</p>
+		</div>
+    <!-- Box Pilihan Arah (Google Maps / Waze) -->
+    <div class="map-box">
+		 <h2>Tekan untuk hadir ke lokasi majlis : </h2>
+        <div class="map-btn-container">
+            <a href="https://www.google.com/maps/place/Masjid+Al+Ikram,+Taman+Sri+Kluang" target="_blank" class="map-btn google-maps">📍 Google Maps</a>
+            <a href="https://waze.com/ul?ll=2.0250,103.3167&navigate=yes" target="_blank" class="map-btn waze">🚗 Waze</a>
+        </div>
+    </div>
+</div>
+
+<div id="calendar" class="section">
+    <div class="calendar-box">
+        <p><strong>Tarikh Majlis:</strong> 13 Februari 2025, 9:00 pagi</p>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Shadan+%26+Safina&dates=20250213T090000Z/20250213T120000Z&details=Join+us+for+the+celebration!" target="_blank" id="calendar-btn" class="btn">Add to Google Calendar</a>
+        </div>
+		<br>
+        <div class="countdown-box">
+            <h3>Counting Days</h3>
+            <div id="countdown"></div>
+        </div>
+    </div>
+
+<div id="wishes" class="section">
+    <h2>Send Your Wishes</h2>
+    <iframe src="https://forms.gle/792Gv59y3aHepa1b6" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+
+<div class="section" id="contact">
+        <div class="background-hs">
+		 <h2>Tekan nombor tertera untuk hubungi :</h2>
+            <div class="contact-container">
+                <a href="https://wa.link/9oypdi" target="_blank" class="button-with-text">
+                    <img src="whatsapp.png" alt="WhatsApp" class="image-button">
+                    <span class="button-text">016-7761116 Shah</span>
+                </a>
+				 <a href="https://wa.link/3gln7o" target="_blank" class="button-with-text">
+                    <img src="whatsapp.png" alt="WhatsApp" class="image-button">
+                    <span class="button-text">010-5446990 Mila</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.classList.remove('active'));
+
+        const section = document.getElementById(sectionId);
+        section.classList.add('active');
+    }
+	
+	// Set the date we're counting down to
+var countDownDate = new Date("Feb 13, 2025 09:00:00").getTime();
+
+// Update the countdown every 1 second
+var x = setInterval(function() {
+
+    // Get the current date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Display the result in the element with id="countdown"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the countdown is finished, display some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "The big day is here!";
+    }
+}, 1000);
+
+</script>
+
+</body>
+</html>

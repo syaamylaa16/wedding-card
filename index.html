@@ -386,6 +386,16 @@ nav ul li a:hover {
 			 <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
         </ul>
     </nav>
+
+	<audio id="bg-music">
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<div style="text-align: center;">
+    <button onclick="document.getElementById('bg-music').play()">▶️</button>
+    <button onclick="document.getElementById('bg-music').pause()">⏸️</button>
+</div>
+
 	
 <div id="home" class="section active">
     <div class="home-box">
@@ -446,12 +456,6 @@ nav ul li a:hover {
         </div>
     </div>
 
-	<audio id="bg-music">
-    <source src="song2.mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="document.getElementById('bg-music').play()">Play Music</button>
-<button onclick="document.getElementById('bg-music').pause()">Pause Music</button>
 
 <script>
     function showSection(sectionId) {

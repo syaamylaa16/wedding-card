@@ -20,7 +20,7 @@
         marquee {
             color: brown;
             font: nexa;
-            font-size: 20px;
+            font-size: 18px;
             padding: 0px;
             margin: 0px;
             font-style: italic;
@@ -386,10 +386,12 @@ nav ul li a:hover {
 			 <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
         </ul>
     </nav>
-   <audio autoplay loop muted>
-    <source src="song.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
+   <audio id="bg-music" autoplay loop muted>
+    <source src="lagu.mp3" type="audio/mpeg">
 </audio>
+
+<button onclick="document.getElementById('bg-music').muted = false;">Unmute Music</button>
+
 
 <div id="home" class="section active">
     <div class="home-box">

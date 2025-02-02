@@ -446,9 +446,12 @@ nav ul li a:hover {
         </div>
     </div>
 
-	<audio id="bg-music" loop>
+	<audio id="bg-music">
     <source src="song2.mp3" type="audio/mpeg">
 </audio>
+
+<button onclick="document.getElementById('bg-music').play()">Play Music</button>
+<button onclick="document.getElementById('bg-music').pause()">Pause Music</button>
 
 <script>
     function showSection(sectionId) {
@@ -487,9 +490,7 @@ var x = setInterval(function() {
         document.getElementById("countdown").innerHTML = "The big day is here!";
     }
 }, 1000);
-	 document.addEventListener("click", function() {
-        document.getElementById("bg-music").play();
-    }, { once: true }); // Supaya hanya play sekali selepas klik pertama
+	
 
 </script>
 
